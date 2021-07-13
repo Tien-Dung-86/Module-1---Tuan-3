@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pocket Tank</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      border : 1px solid black;
+    }
+    img{
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+    table{
+      position: relative;
+      border : 1px solid black;
+      top: 210px;
+      left: 40px;
+    }
+  </style>
+</head>
+<body>
+<h2>Tank</h2>
+<div id="result"><img id="tank" src="tank.png" alt="Load Internet"></div>
+<table>
+  <tr>
+    <td></td>
+    <td><button type="button" onclick="moveForward()"><span>&#8593;</span></button></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="turnLeft()"><span>&#8592;</span></button></td>
+    <td></td>
+    <td><button type="button" onclick="turnRight()"><span>&#8594;</span></button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button type="button" onclick="moveBackward()"><span>&#8595;</span></button></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>
+<script>
+function init(){
+  imgObj = document.getElementById("tank");
+  imgObj.style.position = 'relative';
+  imgObj.style.left = '0px';
+  imgObj.style.top = '0px';
+}
+function turnLeft(){
+  imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+  if (parseInt(imgObj.style.left)  < 0) {
+    imgObj.style.left = 0 + 'px';
+  }
+}
+function turnRight(){
+  imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+  if (parseInt(imgObj.style.left)  > 180) {
+    imgObj.style.left = 0 + 'px';
+  }
+}
+function moveForward(){
+  imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';
+  if (parseInt(imgObj.style.top) < 0) {
+    imgObj.style.top = 0 + 'px';
+  }
+}
+function moveBackward(){
+  imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+  if (parseInt(imgObj.style.top) > 180) {
+    imgObj.style.top = 0 + 'px';
+  }
+}
+window.onload = init;
+</script>

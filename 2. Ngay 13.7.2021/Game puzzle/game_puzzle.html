@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        .puzzle{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div><img class="puzzle" id="img1" src="img/one1.jpg" onclick="change1(this)" alt=""></div>
+    <div><img class="puzzle" id="img2" src="img/two2.jpg" onclick="change2(this)" alt=""></div>
+    <div><img class="puzzle" id="img3" src="img/three3.jpg" onclick="change3(this)" alt=""></div>
+    <div><img class="puzzle" id="img4" src="img/four2.jpg" onclick="change4(this)" alt=""></div>
+    <div><img class="puzzle" id="img5" src="img/five1.jpg" onclick="change5(this)" alt=""></div>
+</div>
+</body>
+</html>
+<script>
+    let a = 0
+    function change1(f) {
+        a++;
+     f.src = "img/one" + a + ".jpg";
+     if (a >= 3){
+         a = 0;
+     }
+     checkSet();
+    }
+
+    let b = 0
+    function change2(f) {
+        b++;
+        f.src = "img/two" + b + ".jpg";
+        if (b >= 3){
+            b = 0;
+        }
+        checkSet();
+    }
+    let c = 0
+    function change3(f) {
+        c++;
+        f.src = "img/three" + c + ".jpg";
+        if (c >= 3){
+            c = 0;
+        }
+        checkSet();
+    }
+    let d = 0
+    function change4(f) {
+        d++;
+        f.src = "img/four" + d + ".jpg";
+        if (d >= 3){
+            d = 0;
+        }
+        checkSet();
+    }
+    let e = 0
+    function change5(f) {
+        e++;
+        f.src = "img/five" + e + ".jpg";
+        if (e >= 3){
+            e = 0;
+        }
+        checkSet();
+    }
+    function checkSet(){
+        if (a === b === c === d === e){
+            alert("mission successful")
+        } else{
+            alert('');
+        }
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <h1>Tính chỉ số cân nặng của cơ thể</h1>
+      <table>
+        <tr>
+          <td>Weight</td>
+          <td><input type="text" id="num1"></td>
+        </tr>
+        <tr>
+          <td>Height</td>
+          <td><input type="text" id="num2"></td>
+        </tr>
+      </table>
+      <button type="button" onclick="showResult()">Calculation</button>
+      <p id="result"></p>
+    </fieldset>
+  </form>
+</body>
+</html>
+
+<script>
+  function showResult() {
+    let weight = parseFloat(document.getElementById("num1").value);
+    let height = parseFloat(document.getElementById("num2").value);
+    bmi = weight / (height * height)
+    if (bmi < 18) {
+      document.getElementById("result").innerText = "BMI = " + bmi + "; Interpretation: Underweight";
+    } else if ((bmi < 25) && (bmi >= 18)) {
+      document.getElementById("result").innerText = "BMI = " + bmi + "; Interpretation: Normal";
+    } else if ((bmi < 30) && (bmi >= 25)) {
+      document.getElementById("result").innerText = "BMI = " + bmi + "; Interpretation: Overweight";
+    } else {
+      document.getElementById("result").innerText = "BMI = " + bmi + "; Interpretation: Obese";
+    }
+  }
+</script>
