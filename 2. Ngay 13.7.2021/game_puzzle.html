@@ -20,58 +20,78 @@
 </body>
 </html>
 <script>
-    let a = 0;
+    let a = 1
     function change1(f) {
-        a++;
-     f.src = "img/one" + a + ".jpg";
-     if (a >= 3){
-         a = 0;
-     }
-     checkSet();
+        if(checkSet()) {
+            return 1;
+        } else {
+            a++;
+            if (a > 3){
+                a = 1;
+            }
+            f.src = "img/one" + a + ".jpg";
+            checkSet();
+        }
+
     }
 
-    let b = 0;
+    let b = 2
     function change2(f) {
-        b++;
-        f.src = "img/two" + b + ".jpg";
-        if (b >= 3){
-            b = 0;
+        if(checkSet()) {
+            return 1;
+        } else {
+            b++;
+            if (b > 3){
+                b = 1;
+            }
+            f.src = "img/two" + b + ".jpg";
+            checkSet();
         }
-        checkSet();
     }
-    let c = 0;
+    let c = 3
     function change3(f) {
-        c++;
-        f.src = "img/three" + c + ".jpg";
-        if (c >= 3){
-            c = 0;
+        if(checkSet()) {
+            return 1;
+        } else {
+            c++;
+            if(c > 3){
+                c = 1;
+            }
+            f.src = "img/three" + c + ".jpg";
+            checkSet();
         }
-        checkSet();
     }
-    let d = 0;
+    let d = 2
     function change4(f) {
-        d++;
-        f.src = "img/four" + d + ".jpg";
-        if (d >= 3){
-            d = 0;
+        if(checkSet()) {
+          return 1;
+        } else {
+            d++;
+            if (d > 3){
+                d = 1;
+            }
+            f.src = "img/four" + d + ".jpg";
+            checkSet();
         }
-        checkSet();
     }
-    let e = 0;
+    let e = 1
     function change5(f) {
-        e++;
-        f.src = "img/five" + e + ".jpg";
-        if (e >= 3){
-            e = 0;
+        if(checkSet()) {
+            return 1;
+        } else {
+            e++;
+            if (e > 3){
+                e = 1;
+            }
+            f.src = "img/five" + e + ".jpg";
+            checkSet();
         }
-        checkSet();
     }
     function checkSet(){
-        if ((a === b === c === d === e)){
-            alert('Mission successful');
-            console.log("Mission successful");
-        } else{
-            alert('again');
+        if (a === b && b === c && c === d && d === e){
+            alert("mission successful");
+            return true;
         }
+        return false;
     }
 </script>

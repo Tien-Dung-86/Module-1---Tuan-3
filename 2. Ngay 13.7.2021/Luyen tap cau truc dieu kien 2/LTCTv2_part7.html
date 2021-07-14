@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc Part 7</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập số thứ nhất");
+  let b = +prompt("Nhập số thứ hai");
+  let c = +prompt("Nhập số thứ ba");
+  delta = b * b - 4 * a * c;
+  del1 = -b / 2 * a;
+  del2 = (-b + Math.sqrt(delta)) / 2 * a;
+  del3 = (-b - Math.sqrt(delta)) / 2 * a;
+  if(delta < 0){
+    alert('Phương trình vô nghiệm');
+  } else if(delta = 0){
+    alert("Phương trình có nghiệm kép" + del1);
+  } else {
+    alert("Phương trình có  2 nghiệm phân biệt là: " + del2 + " và " + del3);
+  }
+</script>
+</body>
+</html>

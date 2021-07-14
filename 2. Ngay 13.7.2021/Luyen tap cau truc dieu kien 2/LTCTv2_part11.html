@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc Part 11</title>
+</head>
+<body>
+<script>
+  let thuNhap = +prompt("Nhập tổng thu nhập");
+  let mienThue = thuNhap * 0.05;
+  thuNhapChiuThue = thuNhap - mienThue;
+  khoanGiamTru = thuNhapChiuThue * 0.01;
+  thuNhapTinhThue = thuNhapChiuThue - khoanGiamTru;
+  thueTNCN = thuNhapTinhThue * 0.06;
+  alert("Số tiền thuế TNCN phải nộp là: " + thueTNCN + " đồng");
+</script>
+</body>
+</html>

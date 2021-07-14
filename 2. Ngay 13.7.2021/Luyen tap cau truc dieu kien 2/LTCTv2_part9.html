@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc Part 9</title>
+</head>
+<body>
+<script>
+  let a = +prompt('Nhập chiều dài cạnh 1');
+  let b = +prompt('Nhập chiều dài cạnh 2');
+  let c = +prompt('Nhập chiều dài cạnh 3');
+  if(a && b && c > 0){
+    if((a + b) > c){
+      if((b + c) > a){
+        if((a + c) > b){
+          alert("Cạnh a = " + a + "," +" cạnh b = " + b + "," +" cạnh c = " + c + " Là cạnh của tam giác")
+        } else {alert("Cạnh a = " + a + "," +" cạnh b = " + b + "," +" cạnh c = " + c + " Không phải là cạnh của tam giác")}
+      } else {alert("Cạnh a = " + a + "," +" cạnh b = " + b + "," +" cạnh c = " + c + " Không phải là cạnh của tam giác")}
+    } else {alert("Cạnh a = " + a + "," +" cạnh b = " + b + "," +" cạnh c = " + c + " Không phải là cạnh của tam giác")}
+  } else {alert("Cạnh a = " + a + "," +" cạnh b = " + b + "," +" cạnh c = " + c + " Không phải là cạnh của tam giác")}
+</script>
+</body>
+</html>

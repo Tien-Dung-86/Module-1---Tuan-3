@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc Part 7</title>
+</head>
+<body>
+<script>
+  let minutes = parseInt(prompt('Nhập số phút gọi'));
+  if(minutes <= 10){
+    costs = minutes * 1000;
+    alert("Cước phí cho: " + minutes + " phút gọi là: " + costs + " đồng");
+  } else if ((minutes < 20) && (minutes > 10)){
+    costs = 10 * 1000 + (minutes - 10) * 800;
+    alert("Cước phí cho: " + minutes + " phút gọi là: " + costs + " đồng");
+  } else {
+    costs = 10 * 1000 + (minutes - 10) * 1000;
+    alert("Cước phí cho: " + minutes + " phút gọi là: " + costs + " đồng");}
+</script>
+</body>
+</html>
