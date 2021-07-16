@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+  <style>
+    hr{
+      width: 300px;
+      float: left;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<input type="text" id="num">
+<span>&nbsp;&nbsp</span>
+<button type="button" onclick="addArr()">Add</button>
+<span>&nbsp;&nbsp</span>
+<button type="button" onclick="displayArr()">Display</button>
+<p id="result"></p>
+</body>
+</html>
+
+<script>
+  let arr = Array();
+  let x = 0;
+
+  function addArr(){
+    arr[x] = document.getElementById("num").value;
+    alert("Element: " + arr[x] + " Added at index " + x);
+    x++;
+    document.getElementById("num ").value = "";
+  }
+  function displayArr() {
+    let e = "<hr/>";
+    for (let i = 0; i < arr.length; i++) {
+      e += "Element " + i + " = " + arr[i] + "<br/>";
+    }
+    document.getElementById("result").innerHTML = e;
+  }
+
+</script>
