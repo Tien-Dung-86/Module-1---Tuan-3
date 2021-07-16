@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vong lặp Part 5</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = 0;
+    let c;
+    let total = 0;
+    for(i = 0; i < 19; i++){
+        c = a;
+        a = a + b;
+        b = c;
+        total += b;
+        console.log(b);
+    }
+    console.log('***');
+    console.log(total);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp Part 6</title>
+</head>
+<body>
+<script>
+  // let total = 0;
+  // for (i = 0; i < 30; i++ ){
+  //   a = i * 7;
+  //   total +=a;
+  // }
+  // document.write(total)
+
+  let total = 0;
+  let count = 0;
+  let number = 0;
+  while (count < 30){
+   if(number % 7 === 0){
+       total += number;
+       count++;
+   }
+   number++;
+  }
+  console.log(total)
+</script>
+</body>
+</html>
